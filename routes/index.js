@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+const Jimp = require('jimp');
 
 var multer = require('multer');
 const {request} = require("express");
@@ -41,7 +42,7 @@ router.use(bodyParser.urlencoded({ extended: true}));
 var ArrayForm = [{
   "title_":"HAB",
   "MoTa_":"mota1",
-  "URLIMG_":"https://raw.githubusercontent.com/zewstudio/Lab5_a/master/uploads/1658933301349.0752abc.jpg",
+  "URLIMG_":"uploads/1658933301349.0752abc.jpg",
 }];
 var title_;
 var mota_;
@@ -50,7 +51,7 @@ function myFuncion(){
   let ArrayForm_ = {
     "title_":title_,
     "MoTa_":mota_,
-    "URLIMG_":"https://raw.githubusercontent.com/zewstudio/Lab5_a/master/uploads/"+urlIMG_,
+    "URLIMG_":"uploads/"+urlIMG_,
   }
   ArrayForm.unshift(ArrayForm_);
 }
